@@ -1,11 +1,15 @@
-### Debiasing Word Embeddings
+### Compare Methods for Mitigating Bias in Word Embeddings
 
-**Goal:** Create debiased word embeddings using a probabilistic framework, specifically by interpolating between two distributions that should be the same using wasserstein distance.
+**Method 1**
 
-Procedure:
+Bolukbasi debiasing -- mathematically manipulating embedding to maintain a geometric definition of unbiased
 
-1. Create a matrix of reshaped distributions along some axis of bias (ex: gender)
+**Method 2**
 
-2. Use this matrix to create new word embeddings
+Retraining embedding to maintain a probabilistic definition of unbiased
 
-3. Measure the bias using WEAT statistics (https://github.com/hljames/compare-embedding-bias)
+EX: $P(he|doctor) \approx P(she|doctor)$
+
+**Method 3**
+
+Retraining vectors to maintain a clustering definition of bias (see Goldberg paper) -- can be combined with either method 1 or method 2.

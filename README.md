@@ -8,7 +8,7 @@ Bolukbasi debiasing -- mathematically manipulating embedding to maintain a geome
 
 Retraining embedding to maintain a probabilistic definition of unbiased
 
-EX: $P(he|doctor) \approx P(she|doctor)$
+EX: $$P(he|doctor) \approx P(she|doctor)$$
 
 **Method 3**
 

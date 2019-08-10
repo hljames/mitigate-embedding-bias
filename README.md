@@ -1,18 +1,21 @@
-### Compare Methods for Mitigating Bias in Word Embeddings
+## Compare Methods for Mitigating Bias in Word Embeddings
 
-**Method 1**
+**Geometric Debiasing**
 
-Bolukbasi debiasing -- mathematically manipulating embedding to maintain a geometric definition of unbiased
+Geometric debiasing, as developed by Bolukbasi et all in "Man is to Computer Programmer as Woman is to Homemaker? Debiasing Word Embeddings" consists of geometrically manipulating the embedding to maintain a geometric definition of unbiased.
 
-The models debiased for comparison using this method were created using the repository created by the authors here:
+The model debiased for comparison using this method were created using the authors' repository:
 https://github.com/tolga-b/debiaswe
 
-**Method 2**
+**Probabilistic Debiasing*
 
-Retraining embedding to maintain a probabilistic definition of unbiased
+This method consists of enforcing a probabilitistic definition of unbiased. For examples, P(he|doctor) = P(she|doctor). These probabilities are constructed using the definition of log conditional probability in Mikolov et al's "Distributed Representations of Words and Phrases and their Compositionality." Rather than geometrically manipulating the vectors, a shallow neural network is used with a loss function being the difference between conditional probabilities of neutral words.
 
-EX: P(he|doctor) = P(she|doctor)
+**Cluster Debiasing**
 
-**Method 3**
+This method of debiasing aims to mitigate a type of bias suggested in Goldberg et al's "Lipstick on a Pig:
+Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do not Remove Them." They suggest that one method of measuring bias: "the percentage of male/female socially-biased words among the k nearest neighbors of the target word." Similar to probabilisitc debiasing, this method uses a shallow neural network to adjust the vectors, where the loss function is the difference between the distance to the k/2 male socially-biased words and the the distance to the k/2 male socially-biased words, as if these distances are similar, the percentage will settle around 50%. 
 
-Retraining vectors to maintain a clustering definition of bias (see Goldberg paper) -- can be combined with either method 1 or method 2.
+## Results
+
+

@@ -18,4 +18,21 @@ Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do no
 
 ## Results
 
+Each of the embeddings performs reasonably well on the validated embedding benchmarks in comparison with the orginal. **note:** the values currently displayed for probabilistic debiasing are incorrect -- the real values are similar to the original.
+
+![Benchmarks](https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/benchmarks.png)
+
+
+Results for embedding bias according to the WEAT statistic
+
+![WEAT](https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/weat_scores.png)
+
+Results for embedding bias as measured by KNN. The values are obtained by summing the absolute value of the difference between the proportion of socially-biased male nearest neighbors and .5 (as ideally, each profession should have around half socially-biased male nearest neighbors and half socially-biased female neighbors).
+
+![KNN] (https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/knn_scores.png)
+
+Several of the professions are shown as an example. For example, note that in the original embedding, the profession "dancer" has 0% socially-biased male nearest neighbors, while "architect" has 100% socially-biased male nearest neighbors.
+
+
+![KNN] (https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/profession_examples.png)
 

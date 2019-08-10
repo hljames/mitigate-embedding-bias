@@ -4,6 +4,9 @@
 
 Bolukbasi debiasing -- mathematically manipulating embedding to maintain a geometric definition of unbiased
 
+The models debiased for comparison using this method were created using the repository created by the authors here:
+https://github.com/tolga-b/debiaswe
+
 **Method 2**
 
 Retraining embedding to maintain a probabilistic definition of unbiased

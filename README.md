@@ -7,7 +7,7 @@ Geometric debiasing, as developed by Bolukbasi et all in "Man is to Computer Pro
 The model debiased for comparison using this method were created using the authors' repository:
 https://github.com/tolga-b/debiaswe
 
-**Probabilistic Debiasing*
+**Probabilistic Debiasing**
 
 This method consists of enforcing a probabilitistic definition of unbiased. For examples, P(he|doctor) = P(she|doctor). These probabilities are constructed using the definition of log conditional probability in Mikolov et al's "Distributed Representations of Words and Phrases and their Compositionality." Rather than geometrically manipulating the vectors, a shallow neural network is used with a loss function being the difference between conditional probabilities of neutral words.
 
@@ -29,10 +29,10 @@ Results for embedding bias according to the WEAT statistic
 
 Results for embedding bias as measured by KNN. The values are obtained by summing the absolute value of the difference between the proportion of socially-biased male nearest neighbors and .5 (as ideally, each profession should have around half socially-biased male nearest neighbors and half socially-biased female neighbors).
 
-![KNN] (https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/knn_scores.png)
+![KNN](https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/knn_scores.png)
 
 Several of the professions are shown as an example. For example, note that in the original embedding, the profession "dancer" has 0% socially-biased male nearest neighbors, while "architect" has 100% socially-biased male nearest neighbors.
 
 
-![KNN] (https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/profession_examples.png)
+![KNN](https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/profession_examples.png)
 

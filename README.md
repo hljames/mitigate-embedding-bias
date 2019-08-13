@@ -1,4 +1,4 @@
-## Compare Methods for Mitigating Bias in Word Embeddings
+## Mitigating Bias in Word Embeddings: Neighborhood Debiasing
 
 Goldberg et al demonstrated that current methods of mitigating bias are not effective according to alternative measures of bias, and suggested an alternative definition of bias in word embeddings. We developed a new method of mitigating bias in word embeddings based on this definition called "KNN/neighborhood debiasing" and demonstrate that when combined with previous methods, it effectively mitigates bias according to both definitions.
 

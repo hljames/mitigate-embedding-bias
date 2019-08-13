@@ -20,7 +20,7 @@ Debiasing Methods Cover up Systematic Gender Biases in Word Embeddings But do no
 
 ## Results
 
-Each of the embeddings performs reasonably well on the validated embedding benchmarks in comparison with the orginal. **note:** the values currently displayed for probabilistic debiasing are incorrect -- the real values are similar to scores for the original embedding.
+Each of the embeddings performs reasonably well on the validated embedding benchmarks in comparison with the orginal..
 
 ![Benchmarks](https://github.com/hljames/mitigate-embedding-bias/blob/master/resources/benchmarks.png)
 
